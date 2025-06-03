@@ -1,0 +1,39 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    fontFamily: {
+      sans: ['Poppins', 'sans-serif'],
+      heading: ['Montserrat', 'sans-serif'],
+    },
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: "#2A9D8F",
+          light: "#4DB6AA",
+          dark: "#217F74",
+        },
+        secondary: {
+          DEFAULT: "#E9C46A",
+          light: "#EED48F",
+          dark: "#DFB445",
+        },
+        accent: {
+          DEFAULT: "#E76F51",
+          light: "#EC8D75",
+          dark: "#D54F2D",
+        },
+        neutral: {
+          DEFAULT: "#264653",
+          light: "#3A6A7E",
+          dark: "#1A3038",
+        },
+        background: "#FAFAFA",
+      },
+    },
+  },
+  plugins: [],
+} 
