@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Update primary colors to yellow theme */
+  --primary: #f5bf23;
+  --primary-light: #ffcf4d;
+  --primary-dark: #e6ad0e;
+  --secondary: #264653;
+  --secondary-light: #3A6A7E;
+  --secondary-dark: #1A3038;
+  --accent: #E76F51;
+  --accent-light: #EC8D75;
+  --accent-dark: #D54F2D;
+  --neutral: #264653;
+  --neutral-light: #3A6A7E;
+  --neutral-dark: #1A3038;
+  --background: #FAFAFA;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-sans bg-background text-neutral min-w-[320px] overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  a {
+    @apply text-primary hover:text-primary-dark transition-colors;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-200 cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-neutral hover:bg-secondary-dark;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-white hover:bg-accent-dark;
+  }
+
+  .btn-outline {
+    @apply border border-primary text-primary hover:bg-primary hover:text-white;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+
+  .container-custom {
+    @apply w-full mx-auto px-4 sm:px-6 lg:px-8;
+    width: 100% !important;
+    max-width: 1280px;
+    min-width: 320px;
+  }
+}
+
+/* Ensure all pages have proper width */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  min-width: 320px;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+/* Special responsive fixes for particular routes */
+.interior, 
+.interior-design-page,
+.job-page,
+.all-jobs-page {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden;
+}

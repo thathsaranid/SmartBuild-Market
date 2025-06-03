@@ -1,0 +1,149 @@
+/* Responsive styles for interior design page */
+.interior-design-page {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden;
+}
+
+/* Improved Swiper Responsive Styles */
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.product-slider {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Yellow theme button and hover effects */
+.btn {
+  background-color: #f5bf23 !important;
+  color: #264653 !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn:hover {
+  background-color: #e6ad0e !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Fix container width issues on mobile */
+.interior .home {
+  padding: 5rem 5% !important;
+  position: relative;
+}
+
+.interior .home::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+  z-index: -1;
+}
+
+.interior .home .content {
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+/* Enhanced cards */
+.box {
+  transition: all 0.3s ease !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+.box:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 10px 25px rgba(245, 191, 35, 0.3) !important;
+}
+
+/* Improved headings */
+.heading {
+  position: relative !important;
+  margin-bottom: 3rem !important;
+  border-left: 1rem solid #f5bf23 !important;
+}
+
+.heading span {
+  background-color: #f5bf23 !important;
+  color: #264653 !important;
+  font-weight: bold !important;
+}
+
+@media (max-width: 640px) {
+  .interior .home .content h3 {
+    font-size: 2.5rem !important;
+  }
+  
+  .interior .home .content p {
+    font-size: 1.4rem !important;
+  }
+  
+  .features .box-container,
+  .categories .box-container {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .btn {
+    padding: 0.8rem 2rem !important;
+    font-size: 1.4rem !important;
+  }
+  
+  .heading {
+    font-size: 2.2rem !important;
+  }
+}
+
+/* Improve general responsiveness */
+.container-custom {
+  width: 100% !important;
+}
+
+/* Make sure sections expand properly */
+section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Better spacing between sections */
+section {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Adjust font sizes for better mobile display */
+@media (max-width: 480px) {
+  .interior .home .content h3 {
+    font-size: 2rem !important;
+  }
+  
+  .interior .home .content p {
+    font-size: 1.2rem !important;
+  }
+  
+  section {
+    padding: 3rem 5% !important;
+  }
+} 
